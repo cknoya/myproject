@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/txt_green"
+    android:orientation="vertical">
+    <com.hidian.charging.ui.widget.SimonArcView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+        <ImageView
+            android:id="@+id/feedback"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/question_green"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="Charging now"/>
+    <RelativeLayout
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="30dp"
+       >
+    <ProgressBar
+        android:id="@+id/xrefreshview_footer_progressbar"
+        style="@style/mProgress_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Time left"/>
+            <TextView
+                android:id="@+id/time_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                android:textColor="@color/txt_green"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="350dp">
+        <TextView
+            android:id="@+id/more_time"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/white_round_bg"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/txt_green"
+            android:gravity="center"
+            android:text="Need more time?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/light" />
+
+                <TextView
+                    android:id="@+id/txt_bootom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:text="You can come back anytime by" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="scanning QRCode again" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

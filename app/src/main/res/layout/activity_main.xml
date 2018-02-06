@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.hidian.charging.ui.activity.MainActivity">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/toolbar" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout">
+
+    </com.amap.api.maps.MapView>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:background="@drawable/center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        android:layout_below="@+id/title_layout">
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:gravity="center|end"
+            android:background="@drawable/text_green"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:textSize="12sp"
+                android:text="Time left"/>
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="00:00:00"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:background="@drawable/withe_oval">
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:background="@drawable/time_count_picture"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/main_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_below="@+id/title_layout"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        android:background="@drawable/white_background"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/door_name" />
+
+                <TextView
+                    android:id="@+id/door_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="商铺名字"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/door_address" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="商铺地址"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/txt_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/door_name" />
+
+                <TextView
+                    android:id="@+id/can_use"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="10台可用"
+                    android:textColor="@color/txt_green" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@color/txt_gray" />
+
+                <TextView
+                    android:id="@+id/all_counts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="共11台" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/txt_gray" />
+        <LinearLayout
+            android:id="@+id/navigation_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/navigation" />
+
+                <TextView
+                    android:id="@+id/far_away"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.4km"
+                    android:textColor="@color/txt_green" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_green"
+                android:text="Navigation"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:id="@+id/repation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/repation"
+            android:layout_marginLeft="20dp"/>
+        <LinearLayout
+            android:id="@+id/saoma_layout"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:elevation="4dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@drawable/text_green">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/saoma"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan QRCode"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/question"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/question"/>
+    </RelativeLayout>
+</RelativeLayout>
